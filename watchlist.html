@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎬 Minha Watchlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="tela-login">
+    <div class="login-card">
+      <h1>🎬 Watchlist</h1>
+      <p class="subtitulo">Faça login para acessar sua lista de filmes</p>
+
+      <div id="erro-login" class="erro"></div>
+
+      <div class="campo">
+        <label for="input-usuario">Usuário</label>
+        <input type="text" id="input-usuario" placeholder="Digite seu usuário">
+      </div>
+
+      <div class="campo">
+        <label for="input-senha">Senha</label>
+        <input type="password" id="input-senha" placeholder="Digite sua senha">
+      </div>
+
+      <button class="btn-login" onclick="fazerLogin()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- TELA DA LISTA -->
+  <div id="tela-lista">
+    <div class="lista-header">
+      <h1>🎬 Minha Watchlist</h1>
+      <button class="btn-sair" onclick="fazerLogout()">Sair</button>
+    </div>
+
+    <div class="adicionar-box">
+      <div class="input-row">
+        <input type="text" id="input-filme" placeholder="Nome do filme...">
+        <button class="btn-adicionar btn-inicio" onclick="adicionarAoInicio()">+ Início</button>
+        <button class="btn-adicionar btn-fim" onclick="adicionarAoFinal()">+ Final</button>
+      </div>
+      <div id="erro-lista" class="erro-lista"></div>
+    </div>
+
+    <div id="contador-filmes" class="contador"></div>
+    <ul id="lista-filmes"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
